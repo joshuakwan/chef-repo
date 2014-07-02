@@ -7,4 +7,8 @@ when "centos"
   default["package_name"] = "httpd"
   default["service_name"] = "httpd"
   default["document_root"] = "/var/www/html"
+when "redhat"
+  default["package_name"] = "httpd"
+  default["service_name"] = "httpd"
+  default["document_root"] = "/var/www/html"
 end

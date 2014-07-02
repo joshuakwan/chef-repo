@@ -1,1 +1,1 @@
-default["company"] = "IBM"
+default["company"] = "MY_COMPANY"
