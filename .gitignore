@@ -50,3 +50,11 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+=======
+.rake_test_cache
+
+###
+# Ignore Chef key files and secrets
+###
+.chef/*.pem
+.chef/encrypted_data_bag_secret
