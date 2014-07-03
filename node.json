@@ -1,0 +1,3 @@
+{
+  "run_list": [ "recipe[apt]","recipe[chef-client::cron]","recipe[my-company]","recipe[apache]" ]
+}
