@@ -24,3 +24,7 @@ template '/tmp/message' do
     from: node['fqdn']
   )
 end
+
+joshua_deploy_dirs do
+  deploy_to "/srv"
+end
