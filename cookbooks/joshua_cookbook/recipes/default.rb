@@ -12,8 +12,9 @@ Chef::Log.info("** Saying what I was told to say: #{message}")
 
 chef_gem 'ipaddress'
 require 'ipaddress'
-ip = IPAddress("192.168.0.1/24")
-Chef::Log.info("Netmask of #{ip}: #{ip.netmask}")
+ip = node['ipaddress']
+mask = IPAddress.netmask(ip)
+Chef::Log.info("Netmask of #{ip}: #{mask}")
 
 template '/tmp/message' do
   source 'message.erb'
