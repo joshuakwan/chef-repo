@@ -28,3 +28,8 @@ end
 joshua_deploy_dirs do
   deploy_to "/srv"
 end
+
+hook = data_bag_item('hooks','request_bin')
+http_request 'callback' do
+  url hook['url']
+end
