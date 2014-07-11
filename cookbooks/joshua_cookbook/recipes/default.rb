@@ -35,6 +35,11 @@ search(:hooks, "*:*").each do |hook|
   end
 end
 
+http_request 'callback' do
+  url node['joshua_cookbook']['callback']['url']
+  only_if { node['joshua_cookbook']['callback']['enabled'] }
+end
+
 file "/etc/backup_config.json" do
   owner "root"
   group "root"
