@@ -46,3 +46,11 @@ file "/etc/backup_config.json" do
   mode 0644
   content data_bag_item('servers','backup')['host'].to_json
 end
+
+template "/etc/logrotate.conf" do
+  source "logrotate.conf.erb"
+  variables(
+    how_often: "daily",
+    keep: "31"
+  )
+end
