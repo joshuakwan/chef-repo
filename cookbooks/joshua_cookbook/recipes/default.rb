@@ -65,14 +65,13 @@ template "/tmp/backends.conf" do
   })
 end
 
-version = "1.3.9"
-bash "install_nginx_from_source" do
-  cwd Chef::Config['file_cache_path']
-  code <<-EOH
-    wget http://nginx.org/download/nginx-#{version}.tar.gz
-    tar zxf nginx-#{version}.tar.gz &&
-    cd nginx-#{version} &&
-    ./configure && make && make install
-  EOH
-  not_if "test -f /usr/local/nginx/sbin/nginx"
+template "/tmp/trigger" do
+  notifies :run, "bash[run_on_trigger]", :immediately
+end
+
+bash "run_on_trigger" do
+  user "root"
+  cwd "/tmp"
+  code "echo 'Triggered'"
+  action :nothing
 end
