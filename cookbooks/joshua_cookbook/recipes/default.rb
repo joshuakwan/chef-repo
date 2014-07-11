@@ -29,7 +29,15 @@ joshua_deploy_dirs do
   deploy_to "/srv"
 end
 
-hook = data_bag_item('hooks','request_bin')
-http_request 'callback' do
-  url hook['url']
+search(:hooks, "*:*").each do |hook|
+  http_request 'callback' do
+    url hook['url']
+  end
+end
+
+file "/etc/backup_config.json" do
+  owner "root"
+  group "root"
+  mode 0644
+  content data_bag_item('servers','backup')['host'].to_json
 end
