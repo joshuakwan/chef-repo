@@ -9,4 +9,4 @@
 
 include_recipe "jenkins::master"
 
-jenkins_plugin 'Build Flow Plugin'
+jenkins_plugin 'build-flow-plugin'
