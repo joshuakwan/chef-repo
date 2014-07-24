@@ -9,4 +9,6 @@
 
 include_recipe "jenkins::master"
 
-jenkins_plugin 'build-flow-plugin'
+jenkins_plugin 'build-flow-plugin' do 
+	notifies :restart, 'service[jenkins]', :immediately	
+end
