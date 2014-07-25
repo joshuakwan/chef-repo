@@ -28,6 +28,10 @@ python_pip 'argparse' do
   action :install
 end
 
+python_pip 'six' do
+  action :install
+end
+
 directory '/etc/jenkins_jobs' do
   owner node['jenkins_job_builder']['user']
   group node['jenkins_job_builder']['group']
