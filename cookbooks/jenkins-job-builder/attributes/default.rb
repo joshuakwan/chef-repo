@@ -10,3 +10,5 @@ default['jenkins_job_builder']['version'] = '0.4.0'
 default['jenkins_job_builder']['from_source'] = nil
 default['jenkins_job_builder']['repo'] = nil
 default['jenkins_job_builder']['hipchat_token'] = nil
+
+default['jenkins']['server']['url'] = 'http://jenkins.example.com'
