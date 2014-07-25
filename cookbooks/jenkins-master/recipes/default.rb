@@ -15,10 +15,10 @@ end
 
 include_recipe "jenkins-job-builder"
 
-cookbook_file "/home/sample-job.yaml" do
+cookbook_file "/usr/local/share/sample-job.yaml" do
 	source "sample-job.yaml"
 end
 
 build_jenkins_job 'sample-job' do
-	job_config "/home/sample-job.yaml"
+	job_config "/usr/local/share/sample-job.yaml"
 end
