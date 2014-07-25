@@ -14,10 +14,3 @@ jenkins_plugin 'build-flow-plugin' do
 end
 
 include_recipe "jenkins-job-builder"
-
-node['jenkins-job-builder']['user'] = 'root'
-node['jenkins-job-builder']['group'] = 'root'
-node['jenkins-job-builder']['username'] = ''
-node['jenkins-job-builder']['password'] = ''
-node['jenkins-job-builder']['url'] = 'http://127.0.0.1:8080'
-node['jenkins']['server']['url'] = 'http://127.0.0.1:8080'
