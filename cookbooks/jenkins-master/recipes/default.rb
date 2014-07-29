@@ -33,6 +33,13 @@ end
 
 include_recipe "jenkins-job-builder"
 
+directory "/usr/local/share/jenkins_jobs/" do
+  owner "root"
+  group "root"
+  mode 0755
+  action :create
+end
+
 cookbook_file "/usr/local/share/jenkins_jobs/sample-jobs.yaml" do
 	source "sample-jobs.yaml"
 end
