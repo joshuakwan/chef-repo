@@ -21,29 +21,29 @@
 - job:
     name: job-pre
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: |
+          echo "building $JOB_NAME"
 
 - job:
     name: job-deploy
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: | 
+          echo "building $JOB_NAME"
 
 - job:
     name: job-smoke
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: |
+          echo "building $JOB_NAME"
 
 - job:
     name: job-acceptance
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: |
+          echo "building $JOB_NAME"
 
 - job:
     name: job-cleanup
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: |
+          echo "building $JOB_NAME"

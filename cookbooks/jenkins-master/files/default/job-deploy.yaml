@@ -3,5 +3,5 @@
 - job:
     name: job-deploy
     builders:
-      - shell:
-        echo "building $JOB_NAME"
+      - shell: |
+          echo "building $JOB_NAME"
