@@ -7,43 +7,43 @@
           echo "Job to demo jjb cookbook."
 
 - job:
-	name: 'flow-demo'
-	defaults: flow
-	node: master
-	project-type: flow
-	dsl: |
-	  build("job-pre")
-	  build("job-deploy")
-	  build("job-smoke")
-	  build("job-acceptance")
-	  build("job-cleanup")
+    name: 'flow-demo'
+    defaults: flow
+    node: master
+    project-type: flow
+    dsl: |
+      build("job-pre")
+      build("job-deploy")
+      build("job-smoke")
+      build("job-acceptance")
+      build("job-cleanup")
 
 - job:
-	name: job-pre
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-pre
+    builders:
+      - shell:
+        echo "building $JOB_NAME"
 
 - job:
-	name: job-deploy
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-deploy
+    builders:
+      - shell:
+        echo "building $JOB_NAME"
 
 - job:
-	name: job-smoke
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-smoke
+    builders:
+      - shell:
+        echo "building $JOB_NAME"
 
 - job:
-	name: job-acceptance
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-acceptance
+    builders:
+      - shell:
+        echo "building $JOB_NAME"
 
 - job:
-	name: job-cleanup
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-cleanup
+    builders:
+      - shell:
+        echo "building $JOB_NAME"

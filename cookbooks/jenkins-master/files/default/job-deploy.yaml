@@ -1,7 +1,7 @@
 #job-deploy.yaml
 
 - job:
-	name: job-deploy
-	builders:
-	  - shell:
-	    echo "building $JOB_NAME"
+    name: job-deploy
+    builders:
+      - shell:
+        echo "building $JOB_NAME"
