@@ -17,12 +17,6 @@ jenkins_plugin 'buildgraph-view' do
 	notifies :restart, 'service[jenkins]', :immediately
 end
 
-jenkins_ssh_slave 'sample-executor' do
-	description 'Sample executor created by Chef'
-	remote_fs '/usr/local/jenkins'
-	host '192.168.1.2'
-end
-
 include_recipe "jenkins-job-builder"
 
 cookbook_file "/usr/local/share/sample-jobs.yaml" do
