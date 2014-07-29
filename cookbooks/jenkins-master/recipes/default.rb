@@ -24,5 +24,5 @@ cookbook_file "/usr/local/share/sample-jobs.yaml" do
 end
 
 build_jenkins_job 'sample-job' do
-	job_config "/usr/local/share/sample-job.yaml"
+	job_config "/usr/local/share/sample-jobs.yaml"
 end
