@@ -38,3 +38,9 @@
     builders:
       - shell: |
           echo "building $JOB_NAME"
+
+- job:
+    name: job-sample
+    builders:
+      - shell: |
+          echo "building $JOB_NAME"
