@@ -1,14 +1,5 @@
 - job:
-    name: sample-job
-    description: |
-        Job to demo jjb cookbook.
-    builders: 
-      - shell: |
-          echo "Job to demo jjb cookbook."
-
-- job:
     name: 'flow-demo'
-    defaults: flow
     node: master
     project-type: flow
     dsl: |
