@@ -44,10 +44,6 @@ cookbook_file "/usr/local/share/jenkins_jobs/sample-jobs.yaml" do
 	source "sample-jobs.yaml"
 end
 
-cookbook_file "/usr/local/share/jenkins_jobs/job-deploy.yaml" do
-	source "job-deploy.yaml"
-end
-
 build_jenkins_job do
 	job_config "/usr/local/share/jenkins_jobs/"
 end
