@@ -26,7 +26,7 @@ jenkins_ssh_slave 'chef-managed-slave' do
   description 'This slave is managed by Chef'
   remote_fs   '/share/executor'
   labels      ['executor', 'nimbus', 'chef']
-  host        '9.114.194.75'
+  host        '9.114.194.79'
   user        'jenkins'
   credentials 'root'
 end

@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+cookbook_file "/usr/local/share/build_artifact.txt" do
+    source "build_artifact.txt"
+end
