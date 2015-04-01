@@ -23,27 +23,27 @@ class Chef
           resources["#{r.resource_name}[#{r.name}]"] = r.elapsed_time
         end
 
-        # print each timing by group, sorting with highest elapsed time first
-        Chef::Log.debug "Elapsed_time  Cookbook"
-        Chef::Log.debug "------------  -------------"
+        # puts each timing by group, sorting with highest elapsed time first
+        puts "Elapsed_time  Cookbook"
+        puts "------------  -------------"
         cookbooks.sort_by{ |k,v| -v }.each do |cookbook, run_time|
-          Chef::Log.debug "%12f  %s" % [run_time, cookbook]
+          puts "%12f  %s" % [run_time, cookbook]
         end
-        Chef::Log.debug ""
+        puts ""
 
-        Chef::Log.debug "Elapsed_time  Recipe"
-        Chef::Log.debug "------------  -------------"
+        puts "Elapsed_time  Recipe"
+        puts "------------  -------------"
         recipes.sort_by{ |k,v| -v }.each do |recipe, run_time|
-          Chef::Log.debug "%12f  %s" % [run_time, recipe]
+          puts "%12f  %s" % [run_time, recipe]
         end
-        Chef::Log.debug ""
+        puts ""
 
-        Chef::Log.debug "Elapsed_time  Resource"
-        Chef::Log.debug "------------  -------------"
+        puts "Elapsed_time  Resource"
+        puts "------------  -------------"
         resources.sort_by{ |k,v| -v }.each do |resource, run_time|
-          Chef::Log.debug "%12f  %s" % [run_time, resource]
+          puts "%12f  %s" % [run_time, resource]
         end
-        Chef::Log.debug ""
+        puts ""
       end
 
     end
